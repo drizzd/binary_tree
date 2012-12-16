@@ -5,7 +5,7 @@ public class Node<Value>  {
 	Value value;
 	Node<Value> left;
 	Node<Value> right;
-	
+
 	Node(int key, Value value) {
 		this.key = key;
 		this.value = value;

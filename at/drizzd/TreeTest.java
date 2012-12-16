@@ -7,13 +7,11 @@ public class TreeTest {
 	private static Tree<Object> tree;
 	
 	@Before
-	public void init()
-	{
+	public void init() {
 		tree = new Tree<Object>();
 	}
 
-	private void addNodes()
-	{
+	private void addNodes() {
 		Node<Object> first = new Node<Object>(5, "five");
 		assertEquals(null, tree.getRoot());
 		tree.addNode(first);
@@ -38,14 +36,12 @@ public class TreeTest {
 	}
 	
 	@Test
-	public void testAdd()
-	{
+	public void testAdd() {
 		addNodes();
 	}
 
 	@Test
-	public void testGet()
-	{
+	public void testGet() {
 		addNodes();
 		assertEquals("minus ten", tree.get(-10));
 		assertEquals("minus three", tree.get(-3));

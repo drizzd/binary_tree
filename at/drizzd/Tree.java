@@ -4,13 +4,11 @@ public class Tree<Value> {
 	Node<Value> root;
 	
 	Tree() {}
-	void addNode(Node<Value> node)
-	{
+	void addNode(Node<Value> node) {
 		root = addNodeRec(root, node);
 	}
 	
-	Node<Value> addNodeRec(Node<Value> root, Node<Value> node)
-	{
+	Node<Value> addNodeRec(Node<Value> root, Node<Value> node) {
 		if (root == null)
 			root = node;
 		else if (node.getKey() < root.getKey())
@@ -25,21 +23,18 @@ public class Tree<Value> {
 		return root;
 	}
 
-	public void add(int key, Value value)
-	{
+	public void add(int key, Value value) {
 		addNode(new Node<Value>(key, value));
 	}
 
-	public Value get(int key)
-	{
+	public Value get(int key) {
 		Node<Value> node = getNodeRec(root, key);
 		if (node == null)
 			return null;
 		return node.getValue();
 	}
 
-	private Node<Value> getNodeRec(Node<Value> root, int key)
-	{
+	private Node<Value> getNodeRec(Node<Value> root, int key) {
 		if (root == null || root.getKey() == key)
 			return root;
 		else if (key < root.getKey())
